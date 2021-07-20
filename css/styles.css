@@ -200,6 +200,10 @@ nav {
   color: var(--white-color);
 }
 
+.block-two {
+  padding-bottom: 0;
+}
+
 .block-two .default-text {
   font-size: 14px;
 }
@@ -350,12 +354,14 @@ nav {
   fill: currentColor;
 }
 
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   border-color: var(--hover-text-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link:hover .clients-link-svg {
+.clients-link:hover .clients-link-svg,
+.clients-link:focus .clients-link-svg {
   fill: var(--hover-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -453,18 +459,21 @@ nav {
   width: 100%;
   padding: 63px 24px;
   font-weight: 400;
+  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
   height: 294px;
+}
+
+.portfolio-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .portfolio-overlay-text {
   top: 0;
-  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-title {
